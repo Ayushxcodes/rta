@@ -5,69 +5,71 @@ export default function OurServices() {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-indigo-500">
-            Our Core RTA Services
+            Our Services
           </span>
           <h2 className="mb-4 text-3xl font-extrabold sm:text-4xl md:text-5xl">
-            Comprehensive Registrar & Transfer Agent Solutions
+            Comprehensive Financial Solutions
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-gray-600 sm:text-xl">
-            End-to-end RTA services designed to ensure accuracy, compliance, and
-            seamless investor experiences across asset classes.
+            Empowering your financial success with a comprehensive range of
+            specialized expertise, tailored to meet your unique needs under one
+            roof.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           
-          {/* Corporate RTA Services */}
+          {/* Assurance */}
           <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
-            <h3 className="mb-4 text-xl font-bold">🏢 Corporate RTA Services</h3>
+            <h3 className="mb-4 text-xl font-bold">🧾 Assurance</h3>
             <ul className="space-y-3 text-gray-700">
-              <li>• Shareholder record maintenance</li>
-              <li>• Share transfer & transmission</li>
-              <li>• Dematerialization & rematerialization</li>
-              <li>• Corporate actions (bonus, split, rights, dividend)</li>
-              <li>• Investor grievance handling</li>
+              <li>• Statutory & internal audits</li>
+              <li>• Accounting & financial reporting</li>
+              <li>• Attestation services</li>
+              <li>• Accounting advisory & support</li>
+              <li>• Risk assessment & controls</li>
             </ul>
           </div>
 
-          {/* Mutual Fund RTA Services */}
+          {/* Direct Tax */}
           <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
-            <h3 className="mb-4 text-xl font-bold">📊 Mutual Fund RTA Services</h3>
+            <h3 className="mb-4 text-xl font-bold">📑 Direct Tax</h3>
             <ul className="space-y-3 text-gray-700">
-              <li>• Investor onboarding & KYC processing</li>
-              <li>• Transaction processing & reporting</li>
-              <li>• Unit holder servicing</li>
-              <li>• NAV-related data processing</li>
-              <li>• Regulatory & compliance reporting</li>
+              <li>• Tax planning & advisory</li>
+              <li>• Transfer pricing solutions</li>
+              <li>• Inbound & outbound taxation</li>
+              <li>• Tax compliance & filings</li>
+              <li>• Litigation & assessment support</li>
             </ul>
           </div>
 
-          {/* Fixed Deposit & Debt Instrument Services */}
+          {/* GST */}
+          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
+            <h3 className="mb-4 text-xl font-bold">🧮 GST</h3>
+            <ul className="space-y-3 text-gray-700">
+              <li>• GST registration & compliance</li>
+              <li>• Return filing & reconciliations</li>
+              <li>• GST outsourcing services</li>
+              <li>• Advisory & impact analysis</li>
+              <li>• GST audit & assessments</li>
+            </ul>
+          </div>
+
+          {/* Advisory, Certification & Secretarial */}
           <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
             <h3 className="mb-4 text-xl font-bold">
-              💼 Fixed Deposit & Debt Instrument Services
+              📊 Advisory, Certification & Secretarial
             </h3>
             <ul className="space-y-3 text-gray-700">
-              <li>• Fixed deposit accounting & servicing</li>
-              <li>• Interest & maturity processing</li>
-              <li>• Redemption & renewal management</li>
-              <li>• Investor communication & reporting</li>
+              <li>• Transaction advisory & valuations</li>
+              <li>• Mergers & acquisitions support</li>
+              <li>• CA certifications & reports</li>
+              <li>• Secretarial compliance & audits</li>
+              <li>• Due diligence & governance advisory</li>
             </ul>
           </div>
 
-          {/* Compliance & Regulatory Support */}
-          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
-            <h3 className="mb-4 text-xl font-bold">
-              🛡 Compliance & Regulatory Support
-            </h3>
-            <ul className="space-y-3 text-gray-700">
-              <li>• SEBI-compliant processes</li>
-              <li>• Periodic audits & reconciliations</li>
-              <li>• Statutory and regulatory reporting</li>
-              <li>• Data security & confidentiality controls</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
