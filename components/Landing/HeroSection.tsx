@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-white text-black py-10 md:py-0">
+    <section id="home" className="relative bg-white text-black py-10 md:py-0">
       <div className="container mx-auto flex min-h-screen items-center px-6">
         {/* Grid wrapper */}
         <div className="grid w-full grid-cols-1 items-center gap-12 md:grid-cols-2">

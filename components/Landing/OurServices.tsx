@@ -1,6 +1,6 @@
 export default function OurServices() {
   return (
-    <section className="bg-white py-20 text-black">
+    <section id="services" className="bg-white py-20 text-black">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="mb-16 text-center">
