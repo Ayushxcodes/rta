@@ -46,17 +46,17 @@ export default function Navbar() {
                   onMouseEnter={() => setIsInvestorDropdownOpen(true)}
                   onMouseLeave={() => setIsInvestorDropdownOpen(false)}
                 >
-                  <a href="/investor/financial-reports" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Financial Reports
+                  <a href="/investor/grievance-redressal" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Grievance Redressal
                   </a>
-                  <a href="/investor/announcements" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Announcements
+                  <a href="/investor/compliance-officer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Compliance Officer
                   </a>
-                  <a href="/investor/shareholder-info" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Shareholder Information
+                  <a href="/investor/investor-charter" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Investor Charter
                   </a>
-                  <a href="/investor/corporate-governance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Corporate Governance
+                  <a href="/investor/investor-grievances-reports" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Investor Grievances Reports
                   </a>
                 </div>
               )}
@@ -95,10 +95,10 @@ export default function Navbar() {
                 </button>
                 {isMobileInvestorOpen && (
                   <div className="ml-4 mt-2 flex flex-col gap-2">
-                    <a href="/investor/financial-reports" className="text-sm hover:text-blue-700">Financial Reports</a>
-                    <a href="/investor/announcements" className="text-sm hover:text-blue-700">Announcements</a>
-                    <a href="/investor/shareholder-info" className="text-sm hover:text-blue-700">Shareholder Information</a>
-                    <a href="/investor/corporate-governance" className="text-sm hover:text-blue-700">Corporate Governance</a>
+                    <a href="/investor/grievance-redressal" className="text-sm hover:text-blue-700">Grievance Redressal</a>
+                    <a href="/investor/compliance-officer" className="text-sm hover:text-blue-700">Compliance Officer</a>
+                    <a href="/investor/investor-charter" className="text-sm hover:text-blue-700">Investor Charter</a>
+                    <a href="/investor/investor-grievances-reports" className="text-sm hover:text-blue-700">Investor Grievances Reports</a>
                   </div>
                 )}
               </div>

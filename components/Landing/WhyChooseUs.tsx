@@ -1,12 +1,10 @@
-import Image from "next/image";
-
 export default function WhyChooseUs() {
   return (
     <section id="contact" className="bg-slate-50 py-20 text-black">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+        <div className="grid grid-cols-1 items-center gap-12">
           {/* LEFT: All Content */}
-          <div className="max-w-3xl">
+          <div>
             {/* Section Header */}
             <div className="mb-16">
               <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-indigo-500">
@@ -64,18 +62,6 @@ export default function WhyChooseUs() {
                 </p>
               </div>
             </div>
-          </div>
-
-          {/* RIGHT: Image */}
-          <div className="relative flex justify-center md:justify-end">
-            <Image
-              src="/hero4.svg" // replace with your image
-              alt="Why Choose Us"
-              width={520}
-              height={520}
-              className="rounded-xl object-contain"
-              priority
-            />
           </div>
         </div>
       </div>
