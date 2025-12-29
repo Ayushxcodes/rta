@@ -77,12 +77,12 @@ export default function Navbar() {
         {isOpen && (
           <div className="lg:hidden bg-sky-50 px-6 py-4">
             <nav className="flex flex-col gap-4 font-medium text-gray-800">
-              <a href="#" className="text-blue-700 border-b-2 border-blue-700">
+              <a href="/" className="text-blue-700 border-b-2 border-blue-700">
                 Home
               </a>
-              <a href="#" className="hover:text-blue-700">RTA Services</a>
-              <a href="#" className="hover:text-blue-700">About Us</a>
-              <a href="#" className="hover:text-blue-700">Our Services</a>
+              <a href="/rta" className="hover:text-blue-700">RTA Services</a>
+              <a href="" className="hover:text-blue-700">About Us</a>
+              <a href="/services" className="hover:text-blue-700">Our Services</a>
               <div>
                 <button
                   onClick={() => setIsMobileInvestorOpen(!isMobileInvestorOpen)}
