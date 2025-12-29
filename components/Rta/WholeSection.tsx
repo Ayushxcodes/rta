@@ -8,7 +8,7 @@ export default function RTAServices() {
             Our Services
           </h1>
           <p className="mx-auto max-w-4xl text-lg text-gray-700 leading-relaxed">
-            Regnum RTA is your one-stop solution for a spectrum of services,
+            TrustLink RTA is your one-stop solution for a spectrum of services,
             encompassing seamless company formation, meticulous regulatory
             compliance, and strategic advisory. Elevate your business with our
             comprehensive RTA services, ensuring a smooth and successful
@@ -29,7 +29,7 @@ export default function RTAServices() {
           Highly Dedicated RTA Services Providing Company in India
         </h2>
         <p className="mx-auto max-w-5xl text-center text-gray-700 leading-relaxed text-lg">
-          Regnum RTA has expanded traditional securities through innovation in
+          TrustLink RTA has expanded traditional securities through innovation in
           response to customer needs. We provide highly relevant compliance
           solutions by understanding the unique situations and targets of our
           clients. Our commitment to innovation in RTA services aligns with
@@ -42,14 +42,14 @@ export default function RTAServices() {
       <div className="bg-white py-16 shadow-inner">
         <div className="container mx-auto px-6 space-y-6 text-gray-700 max-w-5xl mx-auto">
           <p className="text-lg leading-relaxed">
-            As a leading RTA organization, Regnum RTA boasts a professional
+            As a leading RTA organization, TrustLink RTA boasts a professional
             infrastructure capable of handling all associated tasks related to
             Registrar & Transfer Agent Services. Our comprehensive range of
             facilities ensures that clients receive the most relevant and
             valuable services.
           </p>
           <p className="text-lg leading-relaxed">
-            Regnum RTA is actively involved in managing critical administration
+            TrustLink RTA is actively involved in managing critical administration
             tasks related to securities on behalf of issuers, including ISIN
             generation, dematerialization through NSDL/CDSL, and corporate
             actions.

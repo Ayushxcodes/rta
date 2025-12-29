@@ -10,12 +10,12 @@ export default function AboutSection() {
 
           {/* Heading */}
           <h2 className="mb-6 text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
-            Empowering Seamless Transactions with Regnum RTA/STA Services
+            Empowering Seamless Transactions with TrustLink RTA/STA Services
           </h2>
 
           {/* Content */}
           <p className="text-lg text-gray-600 sm:text-xl">
-            As a pioneering service provider in the financial domain, Regnum RTA/STA is committed to streamlining and enhancing the entire process of share issuance and transfer, ensuring a seamless experience for businesses and investors alike. From facilitating the issuance of securities to managing the intricate process of share transfers, Regnum RTA/STA stands as a reliable partner dedicated to simplifying complex financial transactions.
+            As a pioneering service provider in the financial domain, TrustLink RTA/STA is committed to streamlining and enhancing the entire process of share issuance and transfer, ensuring a seamless experience for businesses and investors alike. From facilitating the issuance of securities to managing the intricate process of share transfers, TrustLink RTA/STA stands as a reliable partner dedicated to simplifying complex financial transactions.
           </p>
         </div>
       </div>

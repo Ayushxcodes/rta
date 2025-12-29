@@ -8,7 +8,7 @@ export default function OurServicesPage() {
             Pioneering Your Business Success through Seamless Solutions
           </h1>
           <p className="mx-auto max-w-4xl text-lg text-gray-700 leading-relaxed">
-            Discover excellence with Regnum RTA’s tailored services. From
+            Discover excellence with TrustLink RTA’s tailored services. From
             efficient company formation to meticulous regulatory compliance,
             our comprehensive solutions empower your business journey with
             expertise, precision, and strategic guidance.
@@ -86,11 +86,11 @@ export default function OurServicesPage() {
         </div>
       </div>
 
-      {/* Why Regnum RTA */}
+      {/* Why TrustLink RTA */}
       <div className="bg-sky-50 py-20">
         <div className="container mx-auto px-6">
           <h2 className="mb-6 text-center text-3xl font-bold text-gray-800">
-            Why Regnum RTA
+            Why TrustLink RTA
           </h2>
           <p className="mb-14 text-center text-lg text-gray-700 leading-relaxed border-b border-gray-300 pb-6">
             Revolutionizing Regulatory Compliance with Next-Gen Digital
@@ -116,7 +116,7 @@ export default function OurServicesPage() {
               },
               {
                 title: "Mobile App Accessibility",
-                desc: "Manage regulatory affairs anytime, anywhere with Regnum’s mobile app.",
+                desc: "Manage regulatory affairs anytime, anywhere with TrustLink’s mobile app.",
                 icon: "📱"
               }
             ].map((item, index) => (
