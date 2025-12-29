@@ -1,50 +1,22 @@
-import Image from "next/image";
-
 export default function AboutSection() {
   return (
     <section id="about" className="bg-slate-50 py-20 text-black">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-          {/* LEFT: Image */}
-          <div className="relative flex justify-center md:justify-start">
-            <Image
-              src="/hero2.svg" // replace with your image
-              alt="About Us"
-              width={520}
-              height={520}
-              className="rounded-xl object-contain"
-              priority
-            />
-          </div>
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Section Label */}
+          <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-indigo-500">
+            RTA Overview
+          </span>
 
-          {/* RIGHT: Content */}
-          <div className="max-w-3xl">
-            {/* Section Label */}
-            <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-indigo-500">
-              About Us
-            </span>
+          {/* Heading */}
+          <h2 className="mb-6 text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
+            Empowering Seamless Transactions with Regnum RTA/STA Services
+          </h2>
 
-            {/* Heading */}
-            <h2 className="mb-6 text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
-              Your Reliable Partner in Shareholder & Investor Services
-            </h2>
-
-            {/* Content */}
-            <p className="mb-6 text-lg text-gray-600 sm:text-xl">
-              At <span className="font-semibold text-gray-900">TrustLink</span>, we
-              specialize in delivering comprehensive Registrar & Transfer Agent
-              (RTA) solutions that simplify complex investor servicing and
-              compliance requirements.
-            </p>
-
-            <p className="text-lg text-gray-600 sm:text-xl">
-              With deep domain knowledge and a strong focus on accuracy, we help
-              companies maintain transparent, efficient, and compliant investor
-              records. Our systems, processes, and people are aligned to meet the
-              evolving needs of corporates, mutual funds, issuers, and investors
-              across India.
-            </p>
-          </div>
+          {/* Content */}
+          <p className="text-lg text-gray-600 sm:text-xl">
+            As a pioneering service provider in the financial domain, Regnum RTA/STA is committed to streamlining and enhancing the entire process of share issuance and transfer, ensuring a seamless experience for businesses and investors alike. From facilitating the issuance of securities to managing the intricate process of share transfers, Regnum RTA/STA stands as a reliable partner dedicated to simplifying complex financial transactions.
+          </p>
         </div>
       </div>
     </section>

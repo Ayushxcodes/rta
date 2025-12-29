@@ -6,7 +6,7 @@ import React from 'react'
 
 const Homepage = () => {
   return (
-    <div className='py-10'>
+    <div>
       <HeroSection />
       <AboutSection />
       <OurServices />

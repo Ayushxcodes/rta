@@ -1,50 +1,111 @@
 "use client";
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react';
 
-const Navabr = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isInvestorDropdownOpen, setIsInvestorDropdownOpen] = useState(false);
+  const [isMobileInvestorOpen, setIsMobileInvestorOpen] = useState(false);
 
   return (
-    <nav className={`fixed top-0 w-full z-10 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md' : 'bg-transparent'}`}>
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold text-gray-800">TRUSTLINK</div>
-        <div className="hidden md:flex space-x-6">
-          <a href="#home" className="text-gray-800 hover:text-gray-600 transition-colors">Home</a>
-          <a href="#about" className="text-gray-800 hover:text-gray-600 transition-colors">About</a>
-          <a href="#services" className="text-gray-800 hover:text-gray-600 transition-colors">Services</a>
-          <a href="#contact" className="text-gray-800 hover:text-gray-600 transition-colors">Contact</a>
-        </div>
-        <button
-          className="md:hidden flex flex-col space-y-1"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <div className="w-6 h-0.5 bg-gray-800"></div>
-          <div className="w-6 h-0.5 bg-gray-800"></div>
-          <div className="w-6 h-0.5 bg-gray-800"></div>
-        </button>
+    <header className="w-full">
+      {/* Top Info Bar */}
+      <div className="bg-sky-50 text-sm text-gray-700">
+       
       </div>
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
-          <div className="flex flex-col space-y-4 px-4 py-4">
-            <a href="#home" className="text-gray-800 hover:text-gray-600 transition-colors" onClick={() => setIsOpen(false)}>Home</a>
-            <a href="#about" className="text-gray-800 hover:text-gray-600 transition-colors" onClick={() => setIsOpen(false)}>About</a>
-            <a href="#services" className="text-gray-800 hover:text-gray-600 transition-colors" onClick={() => setIsOpen(false)}>Services</a>
-            <a href="#contact" className="text-gray-800 hover:text-gray-600 transition-colors" onClick={() => setIsOpen(false)}>Contact</a>
-          </div>
-        </div>
-      )}
-    </nav>
-  )
-}
 
-export default Navabr
+      {/* Main Navbar */}
+      <div className="bg-sky-50">
+        <div className="container mx-auto flex items-center justify-between px-6 py-4">
+          {/* Logo */}
+          <div className="flex items-center gap-3">
+            <h1 className="bold text-3xl">TrustLink</h1>
+          </div>
+
+          {/* Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-8 font-medium text-gray-800">
+            <a href="/" className="text-blue-700 border-b-2 border-blue-700">
+              Home
+            </a>
+            <a href="/rta" className="hover:text-blue-700">RTA Services</a>
+            <a href="" className="hover:text-blue-700">About Us</a>
+            <a href="/services" className="hover:text-blue-700">Our Services</a>
+            <div className="relative">
+              <button
+                onMouseEnter={() => setIsInvestorDropdownOpen(true)}
+                onMouseLeave={() => setIsInvestorDropdownOpen(false)}
+                className="hover:text-blue-700 flex items-center gap-1"
+              >
+                Investor Centre
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {isInvestorDropdownOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-10"
+                  onMouseEnter={() => setIsInvestorDropdownOpen(true)}
+                  onMouseLeave={() => setIsInvestorDropdownOpen(false)}
+                >
+                  <a href="/investor/financial-reports" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Financial Reports
+                  </a>
+                  <a href="/investor/announcements" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Announcements
+                  </a>
+                  <a href="/investor/shareholder-info" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Shareholder Information
+                  </a>
+                  <a href="/investor/corporate-governance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Corporate Governance
+                  </a>
+                </div>
+              )}
+            </div>
+          </nav>
+
+          {/* Mobile Burger Menu Button */}
+          <button
+            className="lg:hidden text-2xl"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            ☰
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden bg-sky-50 px-6 py-4">
+            <nav className="flex flex-col gap-4 font-medium text-gray-800">
+              <a href="#" className="text-blue-700 border-b-2 border-blue-700">
+                Home
+              </a>
+              <a href="#" className="hover:text-blue-700">RTA Services</a>
+              <a href="#" className="hover:text-blue-700">About Us</a>
+              <a href="#" className="hover:text-blue-700">Our Services</a>
+              <div>
+                <button
+                  onClick={() => setIsMobileInvestorOpen(!isMobileInvestorOpen)}
+                  className="hover:text-blue-700 flex items-center gap-1 w-full text-left"
+                >
+                  Investor Centre
+                  <svg className={`w-4 h-4 transition-transform ${isMobileInvestorOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isMobileInvestorOpen && (
+                  <div className="ml-4 mt-2 flex flex-col gap-2">
+                    <a href="/investor/financial-reports" className="text-sm hover:text-blue-700">Financial Reports</a>
+                    <a href="/investor/announcements" className="text-sm hover:text-blue-700">Announcements</a>
+                    <a href="/investor/shareholder-info" className="text-sm hover:text-blue-700">Shareholder Information</a>
+                    <a href="/investor/corporate-governance" className="text-sm hover:text-blue-700">Corporate Governance</a>
+                  </div>
+                )}
+              </div>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+}
