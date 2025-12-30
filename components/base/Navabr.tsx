@@ -29,6 +29,7 @@ export default function Navbar() {
             <a href="/rta" className="hover:text-blue-700">RTA Services</a>
             <a href="" className="hover:text-blue-700">About Us</a>
             <a href="/services" className="hover:text-blue-700">Our Services</a>
+            <a href="/resources" className="hover:text-blue-700">Resources</a>
             <div className="relative">
               <button
                 onMouseEnter={() => setIsInvestorDropdownOpen(true)}
@@ -58,6 +59,9 @@ export default function Navbar() {
                   <a href="/investor/investor-grievances-reports" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                     Investor Grievances Reports
                   </a>
+                  <a href="https://smartodr.in/login" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Smart ODR Portal
+                  </a>
                 </div>
               )}
             </div>
@@ -83,6 +87,7 @@ export default function Navbar() {
               <a href="/rta" className="hover:text-blue-700">RTA Services</a>
               <a href="" className="hover:text-blue-700">About Us</a>
               <a href="/services" className="hover:text-blue-700">Our Services</a>
+              <a href="/resources" className="hover:text-blue-700">Resources</a>
               <div>
                 <button
                   onClick={() => setIsMobileInvestorOpen(!isMobileInvestorOpen)}
@@ -99,6 +104,7 @@ export default function Navbar() {
                     <a href="/investor/compliance-officer" className="text-sm hover:text-blue-700">Compliance Officer</a>
                     <a href="/investor/investor-charter" className="text-sm hover:text-blue-700">Investor Charter</a>
                     <a href="/investor/investor-grievances-reports" className="text-sm hover:text-blue-700">Investor Grievances Reports</a>
+                    <a href="/investor/smart-odr-portal" className="text-sm hover:text-blue-700">SMART ODR PORTAL</a>
                   </div>
                 )}
               </div>
