@@ -1,98 +1,236 @@
-export default function Resources() {
+import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
+import type { JSX } from "react";
+
+type DownloadLinkProps = {
+  href: string;
+  label: string;
+};
+
+export default function Resources(): JSX.Element {
+  const DownloadLink = ({ href, label }: DownloadLinkProps) => (
+    <a
+      href={href}
+      download
+      className="flex items-center gap-2 text-blue-600 hover:underline"
+    >
+      <DocumentArrowDownIcon className="h-5 w-5 text-gray-700" />
+      <span>{label}</span>
+    </a>
+  );
+
   return (
     <div className="container mx-auto px-6 py-8">
-      <h1 className="text-3xl font-bold mb-6">Resources</h1>
-
-      {/* SEBI Shareholder Request related Circulars & FAQs */}
+      <h1 className="text-3xl font-bold mb-8">Resources</h1>
+      
+      {/* Dividend */}
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">SEBI Shareholder Request related Circulars & FAQs</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li><a href="#" className="text-blue-600 hover:underline">FAQs with respect to Investor Service Requests processed by RTA vide July 16, 2025</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">SEBI Circular No. SEBI/HO/MIRSD/MIRSD-PoD-1/P/CIR/2023/37 vide March 16, 2023</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">SEBI Circular No. SEBI/HO/MIRSD/MIRSD_RTAMB/P/CIR/2022/8 vide January 25, 2022</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">SEBI Circular No. SEBI/HO/MIRSD/MIRSD_RTAMB/P/CIR/2021/687 vide December 14, 2021</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">SEBI Circular No. SEBI/HO/MIRSD/MIRSD_RTAMB/P/CIR/2021/655 dated November 3, 2021</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Check IPO Allotment Status Link</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Swastika Castal Limited : Prospectus</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Swastika Castal Limited : DRHP</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Shining Tools Limited : DRHP</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Riyaasat Lifestyle Limited : DRHP</a></li>
+        <h2 className="text-xl font-semibold mb-3">Dividend</h2>
+        <ul className="space-y-2">
+          <li>
+            <DownloadLink
+              href="/beneficial-owndership-declaration.docx"
+              label="Dividend Exemption Form"
+            />
+          </li>
+          <li>
+            <DownloadLink
+              href="/FORM_15G.pdf"
+              label="Form 15G"
+            />
+          </li>
+          <li>
+            <DownloadLink
+              href="/form-15H.pdf"
+              label="Form 15H"
+            />
+          </li>
+          <li>
+            <DownloadLink
+              href="/NECS-Form.docx"
+              label="NECS Form"
+            />
+          </li>
         </ul>
       </section>
 
-      {/* Forms for availing various Investor services */}
+      {/* Duplicate Share Certificate */}
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Forms for availing various Investor services</h2>
-        <h3 className="text-xl font-medium mb-2">Shareholder Request Forms</h3>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Registration / Updation of PAN ----- <a href="#" className="text-blue-600 hover:underline">Form ISR 1</a></li>
-          <li>Registration / Updation of Nominee ----- <a href="#" className="text-blue-600 hover:underline">Form SH –13, SH –14 or ISR –3 (As applicable)</a></li>
-          <li>Registration / Updation of Contact details (postal address, Mobile number & E-mail) ----- <a href="#" className="text-blue-600 hover:underline">Form ISR 1</a></li>
-          <li>Registration / Updation of Bank details ----- <a href="#" className="text-blue-600 hover:underline">Form ISR 1</a></li>
-          <li>Registration / Updation of Signature ----- <a href="#" className="text-blue-600 hover:underline">Form ISR –1, ISR –2 (As applicable)</a></li>
-          <li>Issue of Duplicate Share/ Debenture certificate ----- <a href="#" className="text-blue-600 hover:underline">Form ISR –4</a></li>
-          <li>Replacement / Renewal / Exchange of securities certificate ----- <a href="#" className="text-blue-600 hover:underline">Form ISR –4</a></li>
-          <li>Consolidation of securities certificate ----- <a href="#" className="text-blue-600 hover:underline">Form ISR –4</a></li>
-          <li>Sub-division / Splitting of securities certificate ----- <a href="#" className="text-blue-600 hover:underline">Form ISR –4</a></li>
-          <li>Consolidation of folios ----- <a href="#" className="text-blue-600 hover:underline">Form ISR –4</a></li>
-          <li>Endorsement of Share/ Debenture ----- <a href="#" className="text-blue-600 hover:underline">Form ISR –4</a></li>
-          <li>Transposition of Share/ Debenture ----- <a href="#" className="text-blue-600 hover:underline">Form ISR –4</a></li>
-          <li>Change in the name of the holder ----- <a href="#" className="text-blue-600 hover:underline">Form ISR –4</a></li>
-          <li>Claim from Unclaimed Suspense Account & Suspense Escrow Demat Account ----- <a href="#" className="text-blue-600 hover:underline">Form ISR –4</a></li>
-          <li>Change in status from Minor to Major and Resident to NRI and vice versa ----- <a href="#" className="text-blue-600 hover:underline">Request Letter</a></li>
-          <li>Transmission of Share/ Debenture ----- <a href="#" className="text-blue-600 hover:underline">Form ISR –5</a></li>
+        <h2 className="text-xl font-semibold mb-3">
+          Duplicate Share Certificate
+        </h2>
+        <DownloadLink
+          href="/Affidavit-for-Duplicate-cum-transmission.doc"
+          label="Affidavit for Duplicate cum transmission"
+        />
+       
+        <DownloadLink
+          href="/Application-for-Duplicate-Share-Certificate-cum-Transmission.doc"
+          label="Application for Duplicate Share Certificate cum Transmission"
+        />
+        
+        <DownloadLink
+          href="/Indemnity-Bond-for-Duplicate-cum-Transmission.doc"
+          label="Indemnity Bond for Duplicate cum Transmission"
+        />
+        
+        <DownloadLink
+          href="/NOC-for-Transmission.doc"
+          label="NOC for Transmission"
+        />
+        <DownloadLink
+          href="/AFFIDAVIT-for-Issue-of-Duplicate-Share-Certificate-D.docx"
+          label="AFFIDAVIT for Issue of Duplicate Share Certificate-D"
+        />
+        <DownloadLink
+          href="/INDEMNITY-BOND-for-Issue-of-Duplicate-Share-Certificate.docx"
+          label="INDEMNITY BOND for Issue of Duplicate Share Certificate"
+        />
+        <DownloadLink
+          href="/Website-Duplicate-Procedure.docx"
+          label="Website - Duplicate Procedure"
+        />
+      </section>
+
+      {/* Transmission */}
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-3">Transmission</h2>
+        <ul className="space-y-2">
+          <li>
+            <DownloadLink
+              href="/resources/transmission-of-shares.pdf"
+              label="Transmission of Shares"
+            />
+          </li>
+          <li>
+            <DownloadLink
+              href="/resources/duplicate-shares.pdf"
+              label="Duplicate Shares Request"
+            />
+          </li>
         </ul>
       </section>
 
-      {/* KYC & Other Investor Request Format Downloads */}
+      {/* KYC Formats */}
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">KYC & Other Investor Request Format Downloads</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li><a href="#" className="text-blue-600 hover:underline">Registration/ Change/ Updation of KYC Request : Form ISR 1</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Verification of Signature by Banker : Form ISR 2</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Declaration to Opt Out from Nomination : Form ISR 3</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Registration of Nominee : Form SH 13</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Cancellation or Variation in Nominee : Form SH 14</a></li>
+        <h2 className="text-xl font-semibold mb-3">Formats KYC</h2>
+        <ul className="space-y-2">
+          <li>
+            <DownloadLink
+              href="/KYC_Affidavit-for-change-of-signature.docx"
+              label="KYC_Affidavit for change of signature"
+            />
+          </li>
+          <li>
+            <DownloadLink
+              href="/KYC_new-bankers-verification.docx"
+              label="KYC_new bankers verification"
+            />
+          </li>
+          <li>
+            <DownloadLink
+              href="/KYC_Nomination-Registration-Form-1.1-SH13-29.04.docx"
+              label="KYC_Nomination Registration Form 1.1 SH13-29.04"
+            />
+          </li>
         </ul>
       </section>
 
-      {/* Duplicate/ Exchange and Other Request Format Downloads */}
+      {/* Form 10F / 15G / 15H */}
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Duplicate/ Exchange and Other Request Format Downloads</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li><a href="#" className="text-blue-600 hover:underline">SEBI Circular & Formats for Duplicate of Share/ Debenture</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Investor Service Form ISR 4 [Duplicate Certificate and other Service Requests]</a></li>
+        <h2 className="text-xl font-semibold mb-3">
+          Forms 10F / 15G / 15H
+        </h2>
+        <ul className="space-y-2">
+          <li>
+            <DownloadLink href="/Form_10F.pdf" label="Form 10F" />
+          </li>
+          <li>
+            <DownloadLink href="/FORM_15G.pdf" label="Form 15G" />
+          </li>
+          <li>
+            <DownloadLink href="/FORM_NO_15H.pdf" label="Form 15H" />
+          </li>
+          <li>
+            <DownloadLink href="/Self-Declaration-Form.docx" label="Self Decleration Form" />
+          </li>
         </ul>
       </section>
 
-      {/* Transmission/ Name Deletion Request Format Downloads */}
+      {/* Name, Address & Bank Details */}
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Transmission/ Name Deletion Request Format Downloads</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li><a href="#" className="text-blue-600 hover:underline">SEBI Circular & Formats for Transmission of Share/ Debenture</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Investor Service Form ISR 5 [Transmission of Securities by Nominee or Legal Heir]</a></li>
+        <h2 className="text-xl font-semibold mb-3">
+          Name, Address and Bank Detail Correction
+        </h2>
+        <DownloadLink
+          href="/Format-4-Correction-Name_Address_Bank-details.docx"
+          label="Format-4-Correction-Name_Address_Bank-details"
+        />
+      </section>
+
+      {/* Name Deletion */}
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-3">
+          Name Deletion cum Duplicate Share Certificate
+        </h2>
+        <DownloadLink
+          href="/Affidavit-for-Name-deletion-cum-duplicate.docx"
+          label="Affidavit-for-Name-deletion-cum-duplicate"
+        />
+        <DownloadLink
+          href="/Indemnity-Bond-For-Name-Deletion-Cum-Duplicate.docx"
+          label="Indemnity-Bond-For-Name-Deletion-Cum-Duplicate"
+        />
+      </section>
+
+      {/* Nomination */}
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-3">Nomination</h2>
+        <ul className="space-y-2">
+          <li>
+            <DownloadLink
+              href="/Nomination-Cancellation-Form.pdf"
+              label="Nomination-Cancellation-Form"
+            />
+          </li>
+          <li>
+            <DownloadLink
+              href="/Nomination-Registration-Form.pdf"
+              label="Nomination-Registration-Form"
+            />
+          </li>
         </ul>
       </section>
 
-      {/* Affidavit/ Request and Declaration Format Downloads */}
+      {/* Share Transfer */}
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Affidavit/ Request and Declaration Format Downloads</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li><a href="#" className="text-blue-600 hover:underline">Affidavit for Minor Name Mismatch</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Model Tripartite Agreement for Change of RTA</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Model Tripartite Agreement between the Issuer Company, Existing Share Transfer Agent and New Share Transfer Agent</a></li>
-        </ul>
+        <h2 className="text-xl font-semibold mb-3">
+          Share Transfer Form
+        </h2>
+        <DownloadLink
+          href="/Securities-Transfer-Form-SH4-Cos-Act-2013-Finalised.pdf"
+          label="Securities-Transfer-Form-SH4-Cos-Act-2013-Finalised"
+        />
       </section>
 
-      {/* Form 15G/15H/ 10F */}
+      {/* Transmission of Shares */}
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Form 15G/15H/ 10F</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li><a href="#" className="text-blue-600 hover:underline">Form 10F</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Form 15G</a></li>
-          <li><a href="#" className="text-blue-600 hover:underline">Form 15H</a></li>
-        </ul>
+        <h2 className="text-xl font-semibold mb-3">
+          Transmission of Shares
+        </h2>
+        <DownloadLink
+          href="/NOC-for-Transmission.docx"
+          label="NOC for Transmission"
+        />
+        <DownloadLink
+          href="/Transmission-Affidavit.docx"
+          label="Transmission Affidavit"
+        />
+        <DownloadLink
+          href="/Transmission-Application.docx"
+          label="Transmission Application"
+        />
       </section>
+      
     </div>
   );
 }
