@@ -104,7 +104,7 @@ export default function Navbar() {
                     <a href="/investor/compliance-officer" className="text-sm hover:text-blue-700">Compliance Officer</a>
                     <a href="/investor/investor-charter" className="text-sm hover:text-blue-700">Investor Charter</a>
                     <a href="/investor/investor-grievances-reports" className="text-sm hover:text-blue-700">Investor Grievances Reports</a>
-                    <a href="/investor/smart-odr-portal" className="text-sm hover:text-blue-700">SMART ODR PORTAL</a>
+                    <a href="https://smartodr.in/login" className="text-sm hover:text-blue-700">SMART ODR PORTAL</a>
                   </div>
                 )}
               </div>
