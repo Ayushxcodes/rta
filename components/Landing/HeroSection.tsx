@@ -8,10 +8,7 @@ export default function HeroSection() {
             Seamless Registrar & Transfer Agent Solutions
           </h1>
 
-          <h2 className="mb-6 text-xl font-semibold text-gray-800 sm:text-2xl">
-            End-to-end services for listed and unlisted companies, mutual funds,
-            and fixed-income instruments
-          </h2>
+         
 
           <p className="mb-8 text-lg text-gray-600 sm:text-xl">
             We offer comprehensive Registrar & Transfer Agent (RTA) services

@@ -41,7 +41,7 @@ export default function Navbar() {
             <a href="/" className={getLinkClasses("/")}>
               Home
             </a>
-            <a href="/rta" className={getLinkClasses("/rta")}>RTA Services</a>
+            
             <a href="/about" className={getLinkClasses("/about")}>About Us</a>
             <a href="/services" className={getLinkClasses("/services")}>Our Services</a>
             <a href="/resources" className={getLinkClasses("/resources")}>Resources</a>
@@ -65,15 +65,11 @@ export default function Navbar() {
                   <a href="/investor/grievance-redressal" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                     Grievance Redressal
                   </a>
-                  <a href="/investor/compliance-officer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Compliance Officer
-                  </a>
+                  
                   <a href="/investor/investor-charter" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                     Investor Charter
                   </a>
-                  <a href="/investor/investor-grievances-reports" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Investor Grievances Reports
-                  </a>
+                 
                   <a href="https://smartodr.in/login" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                     Smart ODR Portal
                   </a>
@@ -99,7 +95,7 @@ export default function Navbar() {
               <a href="/" className={getLinkClasses("/")}>
                 Home
               </a>
-              <a href="/rta" className={getLinkClasses("/rta")}>RTA Services</a>
+              
               <a href="/about" className={getLinkClasses("/about")}>AboutUs</a>
               <a href="/services" className={getLinkClasses("/services")}>Our Services</a>
               <a href="/resources" className={getLinkClasses("/resources")}>Resources</a>
@@ -116,9 +112,8 @@ export default function Navbar() {
                 {isMobileInvestorOpen && (
                   <div className="ml-4 mt-2 flex flex-col gap-2">
                     <a href="/investor/grievance-redressal" className="text-sm hover:text-blue-700">Grievance Redressal</a>
-                    <a href="/investor/compliance-officer" className="text-sm hover:text-blue-700">Compliance Officer</a>
                     <a href="/investor/investor-charter" className="text-sm hover:text-blue-700">Investor Charter</a>
-                    <a href="/investor/investor-grievances-reports" className="text-sm hover:text-blue-700">Investor Grievances Reports</a>
+                    
                     <a href="https://smartodr.in/login" className="text-sm hover:text-blue-700">SMART ODR PORTAL</a>
                   </div>
                 )}

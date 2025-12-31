@@ -16,9 +16,7 @@ export default function OurServicesPage() {
 
       {/* Services Section */}
       <div className="container mx-auto px-6 py-20 border-b-2 border-gray-200">
-        <h2 className="mb-14 text-center text-3xl font-bold text-gray-800">
-          Our Services
-        </h2>
+        
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {[
