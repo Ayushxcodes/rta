@@ -4,14 +4,12 @@ export default function OurServicesPage() {
       {/* Hero Section */}
       <div className="bg-sky-50 py-24 border-b-2 border-gray-200">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="mb-6 text-4xl font-extrabold sm:text-5xl text-gray-800">
-            Pioneering Your Business Success through Seamless Solutions
+          <h1 className="mb-4 text-4xl font-extrabold sm:text-5xl text-gray-800">
+            Registrar and Share Transfer Agent Services
           </h1>
           <p className="mx-auto max-w-4xl text-lg text-gray-700 leading-relaxed">
-            Discover excellence with TrustLink RTA’s tailored services. From
-            efficient company formation to meticulous regulatory compliance,
-            our comprehensive solutions empower your business journey with
-            expertise, precision, and strategic guidance.
+            Comprehensive RTA services delivered strictly in accordance with
+            SEBI regulations and applicable statutory requirements.
           </p>
         </div>
       </div>
@@ -25,49 +23,114 @@ export default function OurServicesPage() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              title: "Maintenance / Securities",
-              desc: "Efficiently manage and secure your securities with robust maintenance services, ensuring seamless record-keeping and regulatory compliance.",
-              icon: "🛡️"
+              title: "Securities Transfer & Holding Management",
+              icon: "📂",
+              points: [
+                "Processing of transfer of securities in physical form",
+                "Recording change in form of holding (physical to electronic)",
+                "Consolidation of holdings",
+                "Transposition of holdings",
+                "Transmission of holdings"
+              ]
             },
             {
-              title: "Consolidation / Splits",
-              desc: "Optimize share portfolios effortlessly with accurate consolidation and split services, providing clarity and efficiency in holdings.",
-              icon: "📊"
+              title: "Dematerialisation & Rematerialisation",
+              icon: "🏦",
+              points: [
+                "Processing of dematerialisation requests",
+                "Processing of rematerialisation requests",
+                "Maintenance of Demat / Remat request forms and records"
+              ]
             },
             {
-              title: "NSDL / CDSL",
-              desc: "Seamless dematerialisation, rematerialisation, and ISIN activation for efficient share management and compliance.",
-              icon: "🏦"
+              title: "Investor Record Maintenance",
+              icon: "🗂️",
+              points: [
+                "Recording movement of investor holdings",
+                "Maintenance of investor master data",
+                "Upkeep of specimen signatures and basic investor information",
+                "Maintenance of Register of Members"
+              ]
             },
             {
-              title: "Back Security & Unit Security",
-              desc: "From buybacks to delisting, we manage complex corporate actions smoothly and securely.",
-              icon: "🔄"
+              title: "Change Requests & Mandates",
+              icon: "🔁",
+              points: [
+                "Recording change of address",
+                "Updating bank mandates",
+                "Processing ECS / electronic payment requests"
+              ]
             },
             {
-              title: "Benefits",
-              desc: "Empower shareholders with timely benefits management, including call notices and enhanced investor communication.",
-              icon: "📢"
+              title: "Certificates, Nomination & Legal Documentation",
+              icon: "📜",
+              points: [
+                "Issue of duplicate share certificates",
+                "Registration of nomination",
+                "Verification of Power of Attorney",
+                "Succession-related documents",
+                "Other statutory legal documents"
+              ]
             },
             {
-              title: "Arrangement",
-              desc: "Expert handling of AGM, EGM, postal ballots, and attendance slips for seamless corporate events.",
-              icon: "📅"
+              title: "Investor Servicing & Communication",
+              icon: "📞",
+              points: [
+                "Providing investor information at service counters",
+                "Handling queries via written communication, phone, and email",
+                "Processing and resolution of investor service requests"
+              ]
             },
             {
-              title: "Issues of Shares / Securities",
-              desc: "Support business growth through IPOs, bonus issues, rights issues, and efficient warrant processing.",
-              icon: "📈"
+              title: "Corporate Benefits & Payout Services",
+              icon: "💰",
+              points: [
+                "Disbursement of dividends",
+                "Disbursement of interest",
+                "Redemption proceeds",
+                "Disbursement of non-cash corporate benefits"
+              ]
             },
             {
-              title: "Rectification",
-              desc: "Ensure accuracy by resolving discrepancies, eliminating fractions, and addressing investor grievances.",
-              icon: "🔧"
+              title: "Statutory Records & Documentation",
+              icon: "📑",
+              points: [
+                "Maintenance of inward and outward correspondence records",
+                "Transfer deeds and allotment registers",
+                "Register of Members",
+                "Undelivered / returned security documents",
+                "Other statutory registers and returns"
+              ]
             },
             {
-              title: "ESOP",
-              desc: "Enhance employee engagement with seamless ESOP management, including lock-in and partly paid securities.",
-              icon: "💼"
+              title: "MIS & Reporting Services",
+              icon: "📊",
+              points: [
+                "Periodic statistical reports to issuer companies",
+                "Category-wise pattern of holdings",
+                "Geographical distribution of holders / holdings",
+                "MIS support for management and compliance"
+              ]
+            },
+            {
+              title: "Call Payments & Endorsements",
+              icon: "✍️",
+              points: [
+                "Processing of call payments",
+                "Endorsements related to securities"
+              ]
+            },
+            {
+              title: "Corporate Actions & Special Activities",
+              icon: "🔄",
+              points: [
+                "Buy-backs",
+                "Open offers",
+                "Conversion",
+                "Sub-division",
+                "Exchange",
+                "Redemption"
+              ]
             }
           ].map((service, index) => (
             <div
@@ -78,68 +141,13 @@ export default function OurServicesPage() {
               <h3 className="mb-4 text-xl font-semibold text-center text-gray-800">
                 {service.title}
               </h3>
-              <p className="text-gray-700 leading-relaxed text-center">
-                {service.desc}
-              </p>
+              <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
+                {service.points.map((point, idx) => (
+                  <li key={idx}>{point}</li>
+                ))}
+              </ul>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Why TrustLink RTA */}
-      <div className="bg-sky-50 py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="mb-6 text-center text-3xl font-bold text-gray-800">
-            Why TrustLink RTA
-          </h2>
-          <p className="mb-14 text-center text-lg text-gray-700 leading-relaxed border-b border-gray-300 pb-6">
-            Revolutionizing Regulatory Compliance with Next-Gen Digital
-            Innovation and Automation
-          </p>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                title: "Fully Digital & Automated",
-                desc: "Digitized processes eliminate manual work, ensuring faster, error-free compliance.",
-                icon: "🤖"
-              },
-              {
-                title: "Next-Gen Technology",
-                desc: "Future-ready platform designed to adapt to evolving regulatory landscapes.",
-                icon: "🚀"
-              },
-              {
-                title: "Company Login",
-                desc: "Secure, role-based access ensures data confidentiality and controlled authorization.",
-                icon: "🔐"
-              },
-              {
-                title: "Mobile App Accessibility",
-                desc: "Manage regulatory affairs anytime, anywhere with TrustLink’s mobile app.",
-                icon: "📱"
-              }
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="rounded-2xl bg-white p-8 text-center shadow-lg transition-all duration-300 hover:shadow-2xl border border-gray-200"
-              >
-                <div className="text-4xl mb-3">{item.icon}</div>
-                <h3 className="mb-3 text-xl font-semibold text-gray-800">
-                  {item.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-14 text-center border-t border-gray-300 pt-8">
-            <button className="rounded-full bg-blue-900 px-10 py-3 font-semibold text-white hover:bg-blue-800 transition-colors duration-300 shadow-lg">
-              Learn More
-            </button>
-          </div>
         </div>
       </div>
     </section>

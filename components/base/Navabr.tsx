@@ -27,7 +27,7 @@ export default function Navbar() {
               Home
             </a>
             <a href="/rta" className="hover:text-blue-700">RTA Services</a>
-            <a href="" className="hover:text-blue-700">About Us</a>
+            <a href="/about" className="hover:text-blue-700">About Us</a>
             <a href="/services" className="hover:text-blue-700">Our Services</a>
             <a href="/resources" className="hover:text-blue-700">Resources</a>
             <div className="relative">
@@ -85,7 +85,7 @@ export default function Navbar() {
                 Home
               </a>
               <a href="/rta" className="hover:text-blue-700">RTA Services</a>
-              <a href="" className="hover:text-blue-700">About Us</a>
+              <a href="/about" className="hover:text-blue-700">AboutUs</a>
               <a href="/services" className="hover:text-blue-700">Our Services</a>
               <a href="/resources" className="hover:text-blue-700">Resources</a>
               <div>
