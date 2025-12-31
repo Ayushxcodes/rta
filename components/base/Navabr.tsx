@@ -1,10 +1,25 @@
 "use client";
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isInvestorDropdownOpen, setIsInvestorDropdownOpen] = useState(false);
   const [isMobileInvestorOpen, setIsMobileInvestorOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(href);
+  };
+
+  const getLinkClasses = (href: string) => {
+    return isActive(href)
+      ? "text-blue-700 border-b-2 border-blue-700"
+      : "hover:text-blue-700";
+  };
 
   return (
     <header className="w-full">
@@ -23,18 +38,18 @@ export default function Navbar() {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-8 font-medium text-gray-800">
-            <a href="/" className="text-blue-700 border-b-2 border-blue-700">
+            <a href="/" className={getLinkClasses("/")}>
               Home
             </a>
-            <a href="/rta" className="hover:text-blue-700">RTA Services</a>
-            <a href="/about" className="hover:text-blue-700">About Us</a>
-            <a href="/services" className="hover:text-blue-700">Our Services</a>
-            <a href="/resources" className="hover:text-blue-700">Resources</a>
+            <a href="/rta" className={getLinkClasses("/rta")}>RTA Services</a>
+            <a href="/about" className={getLinkClasses("/about")}>About Us</a>
+            <a href="/services" className={getLinkClasses("/services")}>Our Services</a>
+            <a href="/resources" className={getLinkClasses("/resources")}>Resources</a>
             <div className="relative">
               <button
                 onMouseEnter={() => setIsInvestorDropdownOpen(true)}
                 onMouseLeave={() => setIsInvestorDropdownOpen(false)}
-                className="hover:text-blue-700 flex items-center gap-1"
+                className={`hover:text-blue-700 flex items-center gap-1 ${isActive("/investor") ? "text-blue-700 border-b-2 border-blue-700" : ""}`}
               >
                 Investor Centre
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,17 +96,17 @@ export default function Navbar() {
         {isOpen && (
           <div className="lg:hidden bg-sky-50 px-6 py-4">
             <nav className="flex flex-col gap-4 font-medium text-gray-800">
-              <a href="/" className="text-blue-700 border-b-2 border-blue-700">
+              <a href="/" className={getLinkClasses("/")}>
                 Home
               </a>
-              <a href="/rta" className="hover:text-blue-700">RTA Services</a>
-              <a href="/about" className="hover:text-blue-700">AboutUs</a>
-              <a href="/services" className="hover:text-blue-700">Our Services</a>
-              <a href="/resources" className="hover:text-blue-700">Resources</a>
+              <a href="/rta" className={getLinkClasses("/rta")}>RTA Services</a>
+              <a href="/about" className={getLinkClasses("/about")}>AboutUs</a>
+              <a href="/services" className={getLinkClasses("/services")}>Our Services</a>
+              <a href="/resources" className={getLinkClasses("/resources")}>Resources</a>
               <div>
                 <button
                   onClick={() => setIsMobileInvestorOpen(!isMobileInvestorOpen)}
-                  className="hover:text-blue-700 flex items-center gap-1 w-full text-left"
+                  className={`hover:text-blue-700 flex items-center gap-1 w-full text-left ${isActive("/investor") ? "text-blue-700 border-b-2 border-blue-700" : ""}`}
                 >
                   Investor Centre
                   <svg className={`w-4 h-4 transition-transform ${isMobileInvestorOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
