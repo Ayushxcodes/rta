@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="container mx-auto flex items-center justify-between px-6 py-4">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <h1 className="bold text-3xl">TrustLink</h1>
+            <img src="/logo.png" alt="TrustLink Logo" className="h-20 w-auto" />
           </div>
 
           {/* Desktop Navigation Links */}
