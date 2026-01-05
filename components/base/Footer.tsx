@@ -29,7 +29,7 @@ export default function Footer() {
                   href="mailto:info@trustlinkinvestorservices.com"
                   className="transition hover:text-white"
                 >
-                  info@trustlinkinvestorservices.com
+                  grievance@trustlinkinvestor.com
                 </a>
               </li>
               <li>Phone: +91 9910118347</li>

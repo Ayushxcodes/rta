@@ -1,12 +1,21 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isInvestorDropdownOpen, setIsInvestorDropdownOpen] = useState(false);
   const [isMobileInvestorOpen, setIsMobileInvestorOpen] = useState(false);
+  const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeout) {
+        clearTimeout(closeTimeout);
+      }
+    };
+  }, [closeTimeout]);
 
   const isActive = (href: string) => {
     if (href === '/') {
@@ -19,6 +28,29 @@ export default function Navbar() {
     return isActive(href)
       ? "text-blue-700 border-b-2 border-blue-700"
       : "hover:text-blue-700";
+  };
+
+  const handleInvestorMouseEnter = () => {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      setCloseTimeout(null);
+    }
+    setIsInvestorDropdownOpen(true);
+  };
+
+  const handleInvestorMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsInvestorDropdownOpen(false);
+    }, 2000);
+    setCloseTimeout(timeout);
+  };
+
+  const handleInvestorClick = () => {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      setCloseTimeout(null);
+    }
+    setIsInvestorDropdownOpen(!isInvestorDropdownOpen);
   };
 
   return (
@@ -46,35 +78,37 @@ export default function Navbar() {
             <a href="/services" className={getLinkClasses("/services")}>Our Services</a>
             <a href="/resources" className={getLinkClasses("/resources")}>Resources</a>
             <div className="relative">
-              <button
-                onMouseEnter={() => setIsInvestorDropdownOpen(true)}
-                onMouseLeave={() => setIsInvestorDropdownOpen(false)}
-                className={`hover:text-blue-700 flex items-center gap-1 ${isActive("/investor") ? "text-blue-700 border-b-2 border-blue-700" : ""}`}
+              <div
+                onMouseEnter={handleInvestorMouseEnter}
+                onMouseLeave={handleInvestorMouseLeave}
               >
-                Investor Centre
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {isInvestorDropdownOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-10"
-                  onMouseEnter={() => setIsInvestorDropdownOpen(true)}
-                  onMouseLeave={() => setIsInvestorDropdownOpen(false)}
+                <button
+                  onClick={handleInvestorClick}
+                  className={`hover:text-blue-700 flex items-center gap-1 ${isActive("/investor") ? "text-blue-700 border-b-2 border-blue-700" : ""}`}
                 >
-                  <a href="/investor/grievance-redressal" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Grievance Redressal
-                  </a>
-                  
-                  <a href="/investor/investor-charter" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Investor Charter
-                  </a>
-                 
-                  <a href="https://smartodr.in/login" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                    Smart ODR Portal
-                  </a>
-                </div>
-              )}
+                  Investor Centre
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isInvestorDropdownOpen && (
+                  <div
+                    className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-10"
+                  >
+                    <a href="/investor/grievance-redressal" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Grievance Redressal
+                    </a>
+                    
+                    <a href="/investor/investor-charter" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Investor Charter
+                    </a>
+                   
+                    <a href="https://smartodr.in/login" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Smart ODR Portal
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
           </nav>
 
