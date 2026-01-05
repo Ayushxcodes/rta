@@ -1,3 +1,5 @@
+import Card from '../base/Card';
+
 export default function OurServices() {
   return (
     <section id="services" className="bg-white py-20 text-black">
@@ -19,92 +21,92 @@ export default function OurServices() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           
           {/* Maintenance / Securities */}
-          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
+          <Card hover={true} background="gray" className="h-full">
             <h3 className="mb-4 text-xl font-bold">📋 Maintenance / Securities</h3>
             <p className="text-gray-700">
               Maintaining Securities Registry of Investors. Providing electronic services to corporate for securities and debt instruments.
             </p>
-          </div>
+          </Card>
 
           {/* Consolidation / Splits */}
-          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
+          <Card hover={true} background="gray" className="h-full">
             <h3 className="mb-4 text-xl font-bold">🔄 Consolidation / Splits</h3>
             <p className="text-gray-700">
               Sub-division, split and consolidation of securities.
             </p>
-          </div>
+          </Card>
 
           {/* NSDL / CDSL */}
-          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
+          <Card hover={true} background="gray" className="h-full">
             <h3 className="mb-4 text-xl font-bold">🏦 NSDL / CDSL</h3>
             <p className="text-gray-700">
               Dematerialisation and Rematerialisation of securities via both Depository i.e. NSDL and CDSL, ISIN Activation.
             </p>
-          </div>
+          </Card>
 
           {/* Back Security & Unit Security */}
-          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
+          <Card hover={true} background="gray" className="h-full">
             <h3 className="mb-4 text-xl font-bold">🔙 Back Security & Unit Security</h3>
             <p className="text-gray-700">
               Buy back of Securities and De-listing of securities. Merger, De-merger and acquisition of Securities.
             </p>
-          </div>
+          </Card>
 
           {/* Benefits */}
-          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
+          <Card hover={true} background="gray" className="h-full">
             <h3 className="mb-4 text-xl font-bold">📢 Benefits</h3>
             <p className="text-gray-700">
               Call notice to shareholders and beneficiaries.
             </p>
-          </div>
+          </Card>
 
           {/* Arrangement */}
-          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
+          <Card hover={true} background="gray" className="h-full">
             <h3 className="mb-4 text-xl font-bold">📅 Arrangement</h3>
             <p className="text-gray-700">
               Arrangement for holding AGM / EGM, Postal Ballot and Attendance Slips for AGM / EGM.
             </p>
-          </div>
+          </Card>
 
           {/* Issues of shares / Securities */}
-          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
+          <Card hover={true} background="gray" className="h-full">
             <h3 className="mb-4 text-xl font-bold">📈 Issues of shares / Securities</h3>
             <p className="text-gray-700">
               IPO, FPO, Bonus, Rights Issue and processing warrants.
             </p>
-          </div>
+          </Card>
 
           {/* Rectification */}
-          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
+          <Card hover={true} background="gray" className="h-full">
             <h3 className="mb-4 text-xl font-bold">🔧 Rectification</h3>
             <p className="text-gray-700">
               Rectification of errors, fraction elimination and Investor Complaints.
             </p>
-          </div>
+          </Card>
 
           {/* ESOP */}
-          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg">
+          <Card hover={true} background="gray" className="h-full">
             <h3 className="mb-4 text-xl font-bold">💼 ESOP</h3>
             <p className="text-gray-700">
               ESOP and Lock-in and partly paid up securities.
             </p>
-          </div>
+          </Card>
 
           {/* Certificates */}
-          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg lg:col-span-3">
+          <Card hover={true} background="gray" className="h-full lg:col-span-3">
             <h3 className="mb-4 text-xl font-bold">📜 Certificates</h3>
             <p className="text-gray-700">
               Share Certificate related services viz; Issue of Duplicate share certificates, call endorsement of share certificate and exchange of share certificate, etc.
             </p>
-          </div>
+          </Card>
 
           {/* Other Security */}
-          <div className="rounded-xl border border-gray-200 bg-slate-50 p-8 transition hover:shadow-lg lg:col-span-3">
+          <Card hover={true} background="gray" className="h-full lg:col-span-3">
             <h3 className="mb-4 text-xl font-bold">🔐 Other Security</h3>
             <p className="text-gray-700">
               Maintaining and providing Register of Transfer of Shares, Register of Transmission of Shares, Register of Transfer of Debentures, Register of Transmission of Debentures, Shareholding Report, Register of Member, Register of Debenture holders, Register of Foreign Members, Register of Foreign Debenture holders, Register of renewed and duplicate certificate, Register of Payment of Dividend, Allotment Register, Secretarial Audit Services, Certificate under clause 47(c), List of Shareholders, Split Register, Duplicate Register, Consolidation Report, Mailing List, Complaint Status, Merger Register, De-merger Register, Index Register, Allotment Register etc. Transfer, Transmission, Transposition, nomination of securities.
             </p>
-          </div>
+          </Card>
 
         </div>
       </div>
