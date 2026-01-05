@@ -1,9 +1,9 @@
 export default function HeroSection() {
   return (
     <section id="home" className="relative bg-white text-black py-10 md:py-20">
-      <div className="container mx-auto flex px-6">
+      <div className="container mx-auto flex flex-col md:flex-row px-6">
         {/* Text Content */}
-        <div className="w-full md:w-1/2 text-left">
+        <div className="w-full md:w-1/2 text-left mb-8 md:mb-0">
           <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
             Seamless Registrar & Transfer Agent Solutions
           </h1>
@@ -35,7 +35,7 @@ export default function HeroSection() {
         </div>
 
         {/* Image */}
-        <div className="hidden md:flex w-1/2 items-center justify-center">
+        <div className="flex w-full md:w-1/2 items-center justify-center">
           <img 
             src="/trustlink_homepage.png" 
             alt="Registrar & Transfer Agent Solutions" 

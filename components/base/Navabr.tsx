@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
@@ -8,6 +8,7 @@ export default function Navbar() {
   const [isMobileInvestorOpen, setIsMobileInvestorOpen] = useState(false);
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     return () => {
@@ -16,6 +17,27 @@ export default function Navbar() {
       }
     };
   }, [closeTimeout]);
+
+  // Handle clicks outside dropdown to close it
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsInvestorDropdownOpen(false);
+        if (closeTimeout) {
+          clearTimeout(closeTimeout);
+          setCloseTimeout(null);
+        }
+      }
+    };
+
+    if (isInvestorDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isInvestorDropdownOpen, closeTimeout]);
 
   const isActive = (href: string) => {
     if (href === '/') {
@@ -77,7 +99,7 @@ export default function Navbar() {
             <a href="/about" className={getLinkClasses("/about")}>About Us</a>
             <a href="/services" className={getLinkClasses("/services")}>Our Services</a>
             <a href="/resources" className={getLinkClasses("/resources")}>Resources</a>
-            <div className="relative">
+            <div className="relative" ref={dropdownRef}>
               <div
                 onMouseEnter={handleInvestorMouseEnter}
                 onMouseLeave={handleInvestorMouseLeave}

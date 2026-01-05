@@ -2,9 +2,9 @@ export default function OurServicesPage() {
   return (
     <section className="bg-white text-black">
       {/* Hero Section */}
-      <div className="bg-sky-50 py-24 border-b-2 border-gray-200">
+      <div className="bg-sky-50 py-16 border-b-2 border-gray-200">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="mb-4 text-4xl font-extrabold sm:text-5xl text-gray-800">
+          <h1 className="mb-3 text-4xl font-extrabold sm:text-5xl text-gray-800">
             Registrar and Share Transfer Agent Services
           </h1>
           <p className="mx-auto max-w-4xl text-lg text-gray-700 leading-relaxed">
@@ -15,10 +15,8 @@ export default function OurServicesPage() {
       </div>
 
       {/* Services Section */}
-      <div className="container mx-auto px-6 py-20 border-b-2 border-gray-200">
-        
-
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
               title: "Securities Transfer & Holding Management",
@@ -133,10 +131,10 @@ export default function OurServicesPage() {
           ].map((service, index) => (
             <div
               key={index}
-              className="rounded-2xl border-2 border-gray-200 bg-white p-8 transition-all duration-300 hover:shadow-2xl hover:border-blue-300"
+              className="rounded-2xl border-2 border-gray-200 bg-white p-6 transition-all duration-300 hover:shadow-2xl hover:border-blue-300"
             >
-              <div className="text-4xl mb-4 text-center">{service.icon}</div>
-              <h3 className="mb-4 text-xl font-semibold text-center text-gray-800">
+              <div className="text-3xl mb-3 text-center">{service.icon}</div>
+              <h3 className="mb-3 text-lg font-semibold text-center text-gray-800">
                 {service.title}
               </h3>
               <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">

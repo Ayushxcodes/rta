@@ -1,111 +1,167 @@
+import Card from '../../components/base/Card';
+
 export default function AboutUsPage() {
   return (
     <section className="bg-white text-black">
       {/* Hero / Page Header */}
-      <div className="bg-sky-50 py-24 border-b border-gray-200">
+      <div className="bg-gradient-to-br from-sky-50 to-blue-50 py-12 border-b border-gray-200">
         <div className="container mx-auto px-6 text-center">
+          <div className="mb-4">
+            <span className="inline-block px-4 py-2 bg-indigo-100 text-indigo-700 text-sm font-semibold rounded-full mb-2">
+              About Trustlink
+            </span>
+          </div>
           <h1 className="mb-4 text-4xl font-extrabold sm:text-5xl text-gray-800">
             About Us
           </h1>
-          <p className="mx-auto max-w-4xl text-lg text-gray-700 leading-relaxed">
-            Trustlink Investor Services Private Limited
+          <p className="mx-auto max-w-3xl text-xl text-gray-600 leading-relaxed">
+            Trustlink Investor Services Private Limited - Your Trusted Registrar & Transfer Agent
           </p>
         </div>
       </div>
 
       {/* Company Overview */}
-      <div className="container mx-auto px-6 py-20">
-        <div className="mx-auto max-w-5xl space-y-6 text-gray-700 leading-relaxed">
-          <p>
-            <strong>Trustlink Investor Services Private Limited</strong> is a
-            SEBI-registered Registrar and Share Transfer Agent (Category I)
-            bearing Registration No.{" "}
-            <span className="font-semibold">INR000004510</span>.
-          </p>
+      <div className="container mx-auto px-6 py-12">
+        <div className="max-w-4xl mx-auto">
+          <Card background="gray" shadow="lg" className="mb-6">
+            <div className="text-center mb-6">
+              <h2 className="text-3xl font-bold text-gray-800 mb-3">Who We Are</h2>
+              <div className="w-24 h-1 bg-indigo-500 mx-auto rounded-full"></div>
+            </div>
+            <div className="space-y-5 text-gray-700 leading-relaxed text-lg">
+              <p>
+                <strong className="text-indigo-700">Trustlink Investor Services Private Limited</strong> is a
+                SEBI-registered Registrar and Share Transfer Agent (Category I)
+                bearing Registration No.{" "}
+                <span className="font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">
+                  INR000004510
+                </span>.
+              </p>
 
-          <p>
-            We provide end-to-end Registrar and Transfer Agent services to issuer
-            companies and investors, strictly in accordance with the Securities
-            and Exchange Board of India (SEBI) regulations, circulars, and
-            applicable statutory requirements.
-          </p>
+              <p>
+                We provide end-to-end Registrar and Transfer Agent services to issuer
+                companies and investors, strictly in accordance with the Securities
+                and Exchange Board of India (SEBI) regulations, circulars, and
+                applicable statutory requirements.
+              </p>
 
-          <p>
-            Our role is to act as a reliable interface between issuer companies
-            and investors by ensuring accurate maintenance of records, timely
-            processing of investor requests, and efficient handling of
-            corporate actions, while maintaining high standards of governance,
-            compliance, and operational integrity.
-          </p>
+              <p>
+                Our role is to act as a reliable interface between issuer companies
+                and investors by ensuring accurate maintenance of records, timely
+                processing of investor requests, and efficient handling of
+                corporate actions, while maintaining high standards of governance,
+                compliance, and operational integrity.
+              </p>
+            </div>
+          </Card>
         </div>
       </div>
 
       {/* Regulatory Status */}
-      <div className="bg-slate-50 py-16 border-t border-b border-gray-200">
+      <div className="bg-gradient-to-r from-slate-50 to-gray-50 py-12">
         <div className="container mx-auto px-6">
-          <h2 className="mb-8 text-3xl font-bold text-center text-gray-800">
-            Regulatory Status
-          </h2>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-800 mb-3">
+              🛡️ Regulatory Status
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              Licensed and regulated by SEBI to ensure the highest standards of compliance and investor protection
+            </p>
+          </div>
 
-          <div className="mx-auto max-w-4xl rounded-2xl bg-white p-8 shadow-sm border border-gray-200 text-gray-700">
-            <ul className="space-y-4">
-              <li>
-                <strong>SEBI Registration:</strong> Registrar and Share Transfer
-                Agent – Category I
-              </li>
-              <li>
-                <strong>Registration Number:</strong> INR000004510
-              </li>
-              <li>
-                Trustlink Investor Services operates under the regulatory
-                framework prescribed by SEBI and complies with all applicable
-                laws, guidelines, and reporting obligations relevant to
-                Registrar and Transfer Agents.
-              </li>
-            </ul>
+          <div className="max-w-4xl mx-auto">
+            <Card shadow="xl" border={true} className="bg-white">
+              <div className="grid md:grid-cols-2 gap-5">
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span className="font-semibold text-gray-800">SEBI Registration:</span>
+                  </div>
+                  <p className="text-gray-700 ml-6">Registrar and Share Transfer Agent – Category I</p>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    <span className="font-semibold text-gray-800">Registration Number:</span>
+                  </div>
+                  <p className="text-gray-700 ml-6 font-mono bg-gray-50 px-3 py-1 rounded">
+                    INR000004510
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-5 pt-5 border-t border-gray-200">
+                <p className="text-gray-700 text-center">
+                  <span className="font-semibold">Trustlink Investor Services</span> operates under the regulatory
+                  framework prescribed by SEBI and complies with all applicable
+                  laws, guidelines, and reporting obligations relevant to
+                  Registrar and Transfer Agents.
+                </p>
+              </div>
+            </Card>
           </div>
         </div>
       </div>
 
       {/* Vision & Mission */}
-      <div className="container mx-auto px-6 py-20">
-        <div className="grid gap-12 md:grid-cols-2">
+      <div className="container mx-auto px-6 py-12">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-800 mb-3">
+            Our Vision & Mission
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            Driving excellence in investor services through innovation, compliance, and trust
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 max-w-6xl mx-auto">
           {/* Vision */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h3 className="mb-4 text-2xl font-bold text-gray-800">
-              Our Vision
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              To be a trusted and reliable Registrar and Share Transfer Agent,
-              recognized for regulatory compliance, operational accuracy, and
-              investor-centric service delivery.
-            </p>
-          </div>
+          <Card hover={true} shadow="lg" background="white" border={true} className="h-full">
+            <div className="text-center">
+              <div className="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-xl">👁️</span>
+              </div>
+              <h3 className="mb-4 text-2xl font-bold text-gray-800">
+                Our Vision
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-base">
+                To be a trusted and reliable Registrar and Share Transfer Agent,
+                recognized for regulatory compliance, operational accuracy, and
+                investor-centric service delivery.
+              </p>
+            </div>
+          </Card>
 
           {/* Mission */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h3 className="mb-4 text-2xl font-bold text-gray-800">
-              Our Mission
-            </h3>
-            <ul className="space-y-3 text-gray-700 list-disc list-inside">
-              <li>
-                Deliver Registrar and Transfer Agent services in strict
-                adherence to SEBI regulations and statutory requirements
-              </li>
-              <li>
-                Ensure accurate maintenance of investor records and timely
-                processing of service requests
-              </li>
-              <li>
-                Provide transparent, efficient, and responsive investor
-                servicing mechanisms
-              </li>
-              <li>
-                Uphold the highest standards of data security, confidentiality,
-                and corporate governance
-              </li>
-            </ul>
-          </div>
+          <Card hover={true} shadow="lg" background="white" border={true} className="h-full">
+            <div className="text-center">
+              <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-xl">🎯</span>
+              </div>
+              <h3 className="mb-4 text-2xl font-bold text-gray-800">
+                Our Mission
+              </h3>
+              <ul className="space-y-3 text-gray-700 text-left">
+                <li className="flex items-start space-x-3">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  <span className="text-sm">Deliver Registrar and Transfer Agent services in strict adherence to SEBI regulations</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  <span className="text-sm">Ensure accurate maintenance of investor records and timely processing</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  <span className="text-sm">Provide transparent, efficient, and responsive investor servicing</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  <span className="text-sm">Uphold highest standards of data security and corporate governance</span>
+                </li>
+              </ul>
+            </div>
+          </Card>
         </div>
       </div>
     </section>
